@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url(pagee.png);
+            background-position: center;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .feedback-form {
+              
+            padding: 20px;
+            border-radius: 8px;
+            
+            max-width: 500px;
+            width: 100%;
+        }
+        .feedback-form h2 {
+            margin-bottom: 20px;
+            font-size: 30px;
+        }
+        .feedback-form label {
+            display: block;
+            margin-bottom: 8px;
+        }
+        .feedback-form input,
+        .feedback-form select,
+        .feedback-form textarea {
+            width: 96%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .feedback-form button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .feedback-form button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="feedback-form">
+        <h2>Feedback Form</h2>
+        <form action="https://api.web3forms.com/submit" method="POST" method="post">
+        <input type="hidden" name="access_key" value="5a147934-e553-4ac6-a24c-9ce780a76d42">
+
+            <label for="name"><b>Name:</b></label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email"><b>Email:</b></label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="Mobile Number"><b>Mobile Number:</b></label>
+            <input type="number" id="Mobile Number" name="Mobile" required>
+
+            <label for="feedback-type"><b>Type of Feedback:</b></label>
+            <select id="feedback-type" name="feedback_type" required>
+                <option value="" disabled selected><b>Select Feedback Type</b></option>
+                <option value="suggestion"><b>Suggestion</option></b>
+                <option value="complaint"><b>Complaint</option></b>
+                <option value="question"><b>Question</option></b>
+            </select>
+
+            <label for="comments"><b>Comments:</b></label>
+            <textarea id="comments" name="comments" rows="5" required></textarea>
+
+            <button type="submit">Submit Feedback</button>
+        </form>
+    </div>
+</body>
+</html>
